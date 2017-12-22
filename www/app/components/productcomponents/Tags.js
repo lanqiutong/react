@@ -5,7 +5,8 @@ import { Tag } from "antd";
 class Tags extends Component {
     constructor(){
         super();
-      
+  
+       
     }
     render() {
 
@@ -18,7 +19,7 @@ class Tags extends Component {
                         return <Tag
                             key={index}
                             closable
-                            // onClose={(e) => { e.preventDefault(); this.props.delTag(item.tagname) }}
+                            onClose={(e) => { e.preventDefault(); this.props.delTag(item.tagname,item.words)}}
                         >
                             {item.tagname}：{item.words}
                         </Tag>
@@ -34,11 +35,12 @@ export default connect(
     ({productall}) => ({
         "filter": productall.filter
     }),
-    // (dispatch) => ({
+
+    (dispatch) => ({
+        delTag(tagname,words) {
+            
+            dispatch({ "type": "productall/deltag_asyn",tagname,words });
+        }
         
-        
-    //     // delTag(tagname) {
-    //     //     dispatch({ "type": "carpicker/deltag", tagname });
-    //     // }
-    // })
+    })
 )(Tags);

@@ -105,6 +105,7 @@
   text-align: center;
 }
 .shopcar table tr {
+  width: 100%;
   border: 1px solid #f7f0e7;
   box-shadow: 3px 3px 2px #f3ece3;
 }
@@ -186,16 +187,18 @@
 .detail .pics .main .mainpic .productdetail h4 {
   font-size: 16px;
   font-weight: bold;
-  color: #fa6400;
+  color: #fa8e19;
   margin-bottom: 10px;
 }
 .detail .pics .main .mainpic .productdetail .price {
   width: 100%;
   height: 90px;
-  background-color: #fa6400;
+  background-color: #fa8e19;
   color: white;
   text-align: center;
   line-height: 90px;
+  border-bottom: 3px solid #eee;
+  position: relative;
 }
 .detail .pics .main .mainpic .productdetail .price .currentprice {
   font-size: 60px;
@@ -206,6 +209,36 @@
 }
 .detail .pics .main .mainpic .productdetail .price .marketprice {
   text-decoration: line-through;
+}
+.detail .pics .main .mainpic .productdetail .price .bian {
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 0;
+  height: 93px;
+  border-left: 5px solid #fa8e19;
+  border-bottom: 5px solid transparent;
+}
+.detail .pics .main .mainpic .productdetail .shopcar {
+  margin: 20px;
+}
+.detail .pics .main .mainpic .productdetail .shopcar button {
+  width: 20px;
+}
+.detail .pics .main .mainpic .productdetail .shopcar input {
+  width: 50px;
+}
+.detail .pics .main .mainpic .productdetail .shopcar span {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  border: 1px solid #eee;
+  background: #0081c2;
+  border-radius: 5px;
+  color: #fff;
+  margin-left: 10px;
+  text-align: center;
+  line-height: 30px;
 }
 .detail .pics .txtdetail {
   width: 20%;
@@ -227,14 +260,51 @@
 .detail .pics .txtdetail ul li:nth-child(2) {
   border-right: 1px dashed #eee;
 }
-.detail .pics .txtdetail div {
+.detail .pics .txtdetail .info {
   padding: 10px;
   border-bottom: 1px solid #aaa;
 }
-.detail .pics .txtdetail div p {
+.detail .pics .txtdetail .info p {
   display: inline-block;
   height: 20px;
   line-height: 20px;
+}
+.detail .pics .txtdetail div.hpd {
+  width: 80%;
+  margin: 10px 0;
+}
+.detail .pics .txtdetail div.hpd span {
+  display: inline-block;
+  width: 100px;
+  height: 10px;
+  background: #fa8e19;
+  margin: 0px 8px;
+}
+.detail .pics .txtdetail div.hpd p {
+  float: right;
+  width: 28px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fa8e19;
+}
+.detail .pics .showpl {
+  width: 200px;
+  height: 95px;
+  border: 1px solid #fa8e19;
+  margin: 10px auto;
+  position: relative;
+  background: #fff;
+}
+.detail .pics .showpl span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #fa8e19;
+  transform: rotate(45deg);
+  position: absolute;
+  top: -5px;
+  left: 25px;
+  z-index: -1;
 }
 .detail .bottom {
   width: 100%;
@@ -242,6 +312,40 @@
 .detail .bottom .bleft {
   float: left;
   width: 20%;
+}
+.detail .bottom .bleft .relative {
+  border: 1px solid #eee;
+  height: 200px;
+  margin-bottom: 10px;
+}
+.detail .bottom .bleft .relative h3 {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #ccc;
+  margin-bottom: 10px;
+}
+.detail .bottom .bleft .relative ul li {
+  float: left;
+  width: 50%;
+  height: 25px;
+  line-height: 20px;
+  text-align: center;
+}
+.detail .bottom .bleft .footprint {
+  border: 1px solid #eee;
+  height: 200px;
+  margin-bottom: 10px;
+}
+.detail .bottom .bleft .footprint h3 {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #ccc;
+  margin-bottom: 10px;
+}
+.detail .bottom .bleft .footprint ul li img {
+  width: 100%;
 }
 .detail .bottom .bright {
   float: left;
@@ -277,23 +381,61 @@
 .headerNav .header .topNav li {
   float: left;
   line-height: 33px;
-  margin-right: 10px;
+  width: 50px;
+  margin-left: 35px;
+  position: relative;
+}
+.headerNav .header .topNav li i {
+  font-style: normal;
+}
+.headerNav .header .topNav li a {
+  position: relative;
+}
+.headerNav .header .topNav li a span {
+  position: absolute;
+  top: 5px;
+  left: 48px;
+  display: block;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top: 5px solid #aaa;
 }
 .headerNav .header .topNav li .my58div,
 .headerNav .header .topNav li .helpdiv {
+  position: absolute;
+  top: 5px;
+  left: -15px;
+  width: 80px;
+  border: 1px solid #eee;
+  background: #f7f7f7;
+  text-align: center;
+  z-index: 2;
   display: none;
 }
-.headerNav .header .topNav {
+.headerNav .header .topNav li .my58div span,
+.headerNav .header .topNav li .helpdiv span {
+  position: absolute;
+  top: 8px;
+  left: 65px;
+  display: block;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-bottom: 5px solid #aaa;
+}
+.headerNav .header .topNav li:first-child {
+  width: 230px;
+}
+.headerNav .header .topNav li:first-child div {
   float: right;
 }
-.headerNav .header .topNav li {
-  float: left;
-  line-height: 33px;
-  margin-right: 10px;
-}
-.headerNav .header .topNav li .my58div,
-.headerNav .header .topNav li .helpdiv {
-  display: none;
+.headerNav .header .topNav li:last-child {
+  width: 20px;
+  height: 23px;
+  background-position: -74px 7px;
+  padding-top: 7px;
+  background-clip: content-box;
 }
 .headerNav .headerinner {
   width: 80%;
@@ -314,34 +456,6 @@
 }
 .headerNav .headerinner .logo h1 {
   text-indent: -9999px;
-}
-.headerNav .headerinner .search {
-  padding: 30px;
-  position: relative;
-}
-.headerNav .headerinner .search input {
-  border: 1px solid #0081c2;
-  height: 32px;
-  line-height: 32px;
-  vertical-align: middle;
-  margin-bottom: 8px;
-}
-.headerNav .headerinner .search input.input {
-  width: 330px;
-}
-.headerNav .headerinner .search input.submit {
-  position: absolute;
-  top: 30px;
-  right: 36px;
-  height: 32px;
-  width: 78px;
-  cursor: pointer;
-  color: white;
-  font-size: 14px;
-  background: #0081c2;
-}
-.headerNav .headerinner .search .tjsp a {
-  padding: 5px;
 }
 .headerNav .headerinner .myshoppingcar {
   margin-top: 30px;
@@ -555,6 +669,35 @@
   width: 80%;
   margin: 0 auto;
 }
+.productpicker .search {
+  width: 40%;
+  padding: 15px 0 15px 100px;
+  position: relative;
+}
+.productpicker .search input {
+  border: 1px solid #0081c2;
+  height: 32px;
+  line-height: 32px;
+  vertical-align: middle;
+  margin-bottom: 8px;
+}
+.productpicker .search input.input {
+  width: 330px;
+}
+.productpicker .search input.submit {
+  position: absolute;
+  top: 15px;
+  right: -39px;
+  height: 32px;
+  width: 78px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  background: #0081c2;
+}
+.productpicker .search .tjsp a {
+  padding: 5px;
+}
 .productpicker ul.main {
   width: 100%;
   height: 1000px;
@@ -612,7 +755,6 @@
   border-bottom: 2px solid skyblue;
   margin-bottom: 10px;
 }
-.productpicker .hot,
 .productpicker .price,
 .productpicker .typech {
   height: 30px;
@@ -620,7 +762,6 @@
   padding-bottom: 45px;
   border-bottom: 1px solid #ddd;
 }
-.productpicker .hot h3,
 .productpicker .price h3,
 .productpicker .typech h3 {
   float: left;
@@ -630,12 +771,10 @@
   text-align: center;
   line-height: 30px;
 }
-.productpicker .hot ul,
 .productpicker .price ul,
 .productpicker .typech ul {
   float: left;
 }
-.productpicker .hot ul li,
 .productpicker .price ul li,
 .productpicker .typech ul li {
   float: left;
@@ -645,4 +784,76 @@
   border: 1px solid #eee;
   border-radius: 3px;
   margin-right: 5px;
+}
+.login {
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
+}
+.login .img {
+  width: 60%;
+  float: left;
+  margin-top: 50px;
+}
+.login .input {
+  float: left;
+  margin-top: 50px;
+  border: 5px solid #eee;
+  font-size: 16px;
+  color: #333;
+  padding: 20px;
+}
+.login .input p {
+  display: block;
+  height: 50px;
+}
+.regist {
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
+}
+.regist .biaodan {
+  float: left;
+  position: relative;
+  width: 50%;
+  margin: 50px;
+  border: 5px solid #eee;
+  font-size: 16px;
+  color: #333;
+  padding: 20px;
+}
+.regist .biaodan p {
+  display: block;
+  height: 50px;
+  padding-left: 100px;
+}
+.regist .biaodan p span {
+  display: inline-block;
+  width: 85px;
+}
+.regist .biaodan .submit {
+  position: absolute;
+  bottom: 0;
+  right: 155px;
+}
+.regist .biaodan .submit input {
+  width: 100px;
+  height: 30px;
+  background: #0081c2;
+}
+.regist .biaodan .login {
+  position: absolute;
+  top: -50px;
+  right: -50%;
+  font-size: 14px;
+}
+.regist .biaodan .login i {
+  font-style: normal;
+  color: blue;
+}
+.regist .img {
+  float: left;
+  width: 320px;
+  height: 255px;
+  margin: 50px;
 }

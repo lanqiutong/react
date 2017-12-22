@@ -7,6 +7,8 @@ import Toubu from "./components/productcomponents/toubu.js";
 import Footer from "./components/productcomponents/Footer.js";
 import Productpicker from "./components/ProductPicker.js";
 import Duorou from "./components/Duorou.js";
+import Login from "./components/Login.js";
+import Regist from "./components/Regist.js";
 export default ({ history }) => {
     return <Router history={history}>
         <div>
@@ -18,6 +20,8 @@ export default ({ history }) => {
                         <Route path="/Productpicker"  component={Productpicker} />
                         <Route path="/duorou" component={Duorou} />   
                         <Route path="/shopcar" component={Shopcar} />
+                        <Route path="/login" component={Login} />
+                        <Route path="/regist" component={Regist} />
                         <Route path="/productDetail/:id" component={ProductDetail} />    
                 </div>
                 </Router >

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from "dva";
+import { NavLink } from 'dva/router';
 import "../styles/shopcar.less";
 
 class Shopcar extends Component {
@@ -26,9 +27,9 @@ class Shopcar extends Component {
       var Arr=[];
       if(this.props.shopcar){Arr.push(this.props.shopcar.map((item,index)=>{
         return <tr key={index}>
-        <td><input type="checkbox"/></td>
-          <td>{item.name}</td>
-          <td><img src={`./images/${item.typeeng}/${item.image}`}/></td>
+          <td><input type="checkbox"/></td>
+          <td><NavLink to={"/productDetail/" + item.id} key={index}>{item.name}</NavLink ></td>
+          <td><NavLink to={"/productDetail/" + item.id} key={index}><img src={`./images/${item.typeeng}/${item.image}`}/></NavLink ></td>
           <td>{item.currentprice}</td>
           <td><button onClick={() => this.changeshop({ item, amount: item.amount - 1 })}>-</button><input type="number" value={item.amount} onChange={() => this.changeshop({ item, amount: this.value })} /><button onClick={() => this.changeshop({ item, amount: item.amount + 1}) }>+</button></td>
           <td>{item.currentprice * item.amount}</td>

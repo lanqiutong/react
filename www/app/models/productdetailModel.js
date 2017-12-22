@@ -4,9 +4,9 @@ export default {
         "product":"",
     },
     "reducers": {
-        init(state, item) {
+        init(state, results) {
             return {
-                "product": item
+                "product": results
 
             }
 
@@ -15,12 +15,11 @@ export default {
     },
     "effects": {
         *fetchInit(action, { put }) {
-           
-            if(action.id){
-            const { amount, results } = yield fetch(`/api/${aciton.id}`).then(data => data.json());
+        
+            const { amount, results } = yield fetch(`/api?id=${action.id}`).then(data => data.json());
            
             yield put({ "type": "init", results });
         }
-        }
+       
     }
 }
