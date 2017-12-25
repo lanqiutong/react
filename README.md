@@ -17,54 +17,43 @@ react+dva+express+mongoose+mock+less
 ### 项目结构：
 ------------
 
-│  app.js
-
-│  mock.js
-
-│  package.json
-
-│  webpack.config.js
-
-│  项目运行方法.txt
-
-│
-
-├─models
-
-│      Product.js
-
-│      Shopcar.js
-
-│      User.js
-
-│
-
-└─www
-    │  index.html   
-    │    
-    ├─app  
-    │  │  App.js
-    │  │  main.js
-    │  │  router.js
+│  app.js 
+│  mock.js 
+│  package.json 
+│  webpack.config.js 
+│  项目运行方法.txt 
+│ 
+├─models 
+│      Product.js 
+│      Shopcar.js 
+│      User.js 
+│ 
+└─www 
+    │  index.html    
+    │     
+    ├─app   
+    │  │  App.js 
+    │  │  main.js 
+    │  │  router.js 
+    │  │ 
+    │  ├─components 
+    │  │  │  Duorou.js 
+    │  │  │  Homepage.js 
+    │  │  │  Login.js 
+    │  │  │  ProductDetail.js 
+    │  │  │  ProductPicker.js 
+    │  │  │  Regist.js 
+    │  │  │  Shopcar.js 
+    │  │  │ 
+    │  │  └─productcomponents 
+    │  │          Footer.js 
+    │  │          Lunbo.js 
+    │  │          Lunbo2.js 
+    │  │          Nav.js 
+    │  │          Product.js 
+    │  │          Tags.js 
+    │  │          toubu.js 
     │  │
-    │  ├─components
-    │  │  │  Duorou.js
-    │  │  │  Homepage.js
-    │  │  │  Login.js
-    │  │  │  ProductDetail.js
-    │  │  │  ProductPicker.js
-    │  │  │  Regist.js
-    │  │  │  Shopcar.js
-    │  │  │
-    │  │  └─productcomponents
-    │  │          Footer.js
-    │  │          Lunbo.js
-    │  │          Lunbo2.js
-    │  │          Nav.js
-    │  │          Product.js
-    │  │          Tags.js
-    │  │          toubu.js
-    │  │
-    │  ├─models
-    │  │      loginModel.js
+    │  ├─models 
+    │  │      loginModel.js 
     │  │      productallModel.js
