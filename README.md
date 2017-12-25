@@ -15,22 +15,34 @@ react+dva+express+mongoose+mock+less
 
 
 ### 项目结构：
+------------
 
 │  app.js
+
 │  mock.js
+
 │  package.json
+
 │  webpack.config.js
+
 │  项目运行方法.txt
+
 │
+
 ├─models
+
 │      Product.js
+
 │      Shopcar.js
+
 │      User.js
+
 │
+
 └─www
-    │  index.html
-    │
-    ├─app
+    │  index.html   
+    │    
+    ├─app  
     │  │  App.js
     │  │  main.js
     │  │  router.js
