@@ -57,3 +57,5 @@ react+dva+express+mongoose+mock+less
     │  ├─models   
     │  │      loginModel.js   
     │  │      productallModel.js  
+###  项目运行方法
+安装依赖，npm start
