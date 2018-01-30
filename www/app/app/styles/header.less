@@ -1,0 +1,221 @@
+.headerNav {
+    width: 100%;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #0081c2;
+    .header {
+        width: 100%;
+        height: 33px;
+        background: #f7f7f7;
+        .headerMeau {
+            width: 80%;
+            margin: 0 auto;
+            .topTel {
+                float: left;
+                line-height: 33px;
+                font-size: 18px;
+                color: #9d1a79;
+                font-weight: bold;
+            }
+        }
+        .topNav {
+            float: right;
+            li {
+                float: left;
+                line-height: 33px;
+                width: 50px;
+                margin-left: 35px;
+                position: relative;
+                i {
+                    font-style: normal;
+                }
+                a {
+                    position: relative;
+                    span {
+                        position: absolute;
+                        top: 5px;
+                        left: 48px;
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        border: 5px solid transparent;
+                        border-top: 5px solid #aaa;
+                    }
+                }
+                .my58div,
+                .helpdiv {
+                    position: absolute;
+                    top: 5px;
+                    left: -15px;
+                    width: 80px;
+                    border: 1px solid #eee;
+                    background: #f7f7f7;
+                    text-align: center;
+                    z-index: 2;
+                    display: none;
+                    span {
+                        position: absolute;
+                        top: 8px;
+                        left: 65px;
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        border: 5px solid transparent;
+                        border-bottom: 5px solid #aaa;
+                    }
+                }
+            }
+            li:first-child {
+                width: 230px;
+                div {
+                    float: right;
+                }
+            }
+            li:last-child {
+                width: 20px;
+                height: 23px;
+                background-position: -74px 7px;
+                padding-top: 7px;
+                background-clip: content-box;
+            }
+        }
+    }
+    .headerinner {
+        width: 80%;
+        height: 104px;
+        margin: 0 auto;
+        .logo {
+            width: 90%;
+            height: 80px;
+            float: left;
+            background-size: 119%;
+            padding-right: 20px;
+            background-clip: content-box;
+            background-repeat: no-repeat;
+            padding-top: 21px;
+            background-origin: content-box;
+            box-sizing: content-box;
+            h1 {
+                text-indent: -9999px;
+            }
+        }
+        .myshoppingcar {
+            margin-top: 30px;
+            width: 186px;
+            height: 32px;
+            border: 1px solid rgb(189, 185, 185);
+            div {
+                float: left;
+                line-height: 32px;
+            }
+            div:nth-child(1) {
+                width: 45px;
+                height: 26px;
+                padding: 5px 0 0px 20px;
+                background-position: -110px -232px;
+                background-origin: content-box;
+            }
+            div:nth-child(3) {
+                width: 36px;
+                height: 30px;
+                float: right;
+                background: orange;
+                color: white;
+                font-weight: bold;
+                text-align: center;
+                font-size: 15px;
+            }
+        }
+    }
+    .productNav {
+        width: 80%;
+        margin: 0 auto;
+        height: 30px;
+        font-size: 14px;
+        font-weight: bold;
+        position: relative;
+        .all {
+            float: left;
+            width: 20%;
+            background: #0081c2;
+            color: white;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+        ul {
+            float: left;
+            li {
+                width: 100px;
+                height: 30px;
+                line-height: 30px;
+                float: left;
+                color: #333;
+                text-align: center;
+                div {
+                    width: 100%;
+                    height: 30px;
+                }
+            }
+            li.cur {
+                color: #0081c2;
+            }
+        }
+        .list {
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 20%;
+            height: 480px;
+            background: #bc197b;
+            dl {
+                font-family: Microsoft YaHei;
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 10px 0 5px 30px;
+                background-repeat: no-repeat;
+                dt {
+                    a {
+                        color: #fff;
+                        font-size: 14px;
+                    }
+                }
+                dd {
+                    a {
+                        font-weight: normal;
+                        color: #eee;
+                        padding-right: 10px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .detaillist {
+            width: 560;
+            height: 480px;
+            position: absolute;
+            top: 32px;
+            left: 20%;
+            z-index: 999;
+            background: white;
+            .detailtxt {
+                width: 100%;
+                height: 280px;
+                dl {
+                    padding-left: 30px;
+                    dd {
+                        float: left;
+                        padding: 10px;
+                        color: #bc197b;
+                    }
+                    dt {
+                        float: left;
+                        font-weight: normal;
+                        margin-top: 10px;
+                        padding: 0 5px;
+                        border-left: 1px solid #eee;
+                    }
+                }
+            }
+        }
+    }
+}
