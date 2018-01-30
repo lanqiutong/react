@@ -1,2 +1,4 @@
-mongod --dbpath c:\database  数据库开机
-npm start
+﻿mongod --dbpath c:\database  数据库开机
+1
+1 npm start
+1
